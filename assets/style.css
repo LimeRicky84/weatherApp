@@ -1,0 +1,97 @@
+:root {
+    --boxColor: rgb(50, 67, 82);
+}
+
+.page-header {
+    background-color: blue;
+    padding: 0px;
+    margin-top: 0px;
+    
+}
+
+h1 {
+    color: aliceblue;
+}
+
+#display {  
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.2fr 0.6fr 0.6fr 0.6fr 0.6fr;
+  gap: 0px 0px;
+  border: 2px solid;
+  padding-left: 15px; 
+  grid-auto-flow: column;
+  grid-template-areas:
+    "sidebar display display"
+    "sidebar forecast forecast"
+    "sidebar . .";
+}
+
+.listed {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 5px;
+  grid-auto-flow: column dense;
+}
+
+.heavy {
+  font-size: large;
+}
+  
+  .sidebar { 
+    grid-area: sidebar; 
+
+}
+
+#divide {
+  border-top: 2px solid slategrey;
+}
+
+  .forecast {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 1.7fr;
+    gap: 10px 10px;
+    margin-right: 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "head head head head ."
+      "bx1 bx2 bx3 bx4 bx5";
+    grid-area: "forecast";
+}
+  
+  .head { 
+    grid-area: head; 
+}
+  
+  .bx1 {
+    grid-area: bx1; 
+    background-color: var(--boxColor);
+    color: white;
+}
+  
+  .bx2 { 
+    grid-area: bx2; 
+    background-color: var(--boxColor);
+    color: white;
+}
+  
+  .bx3 { 
+    grid-area: bx3; 
+    background-color: var(--boxColor);
+    color: white;
+}
+  
+  .bx4 { 
+    grid-area: bx4; 
+    background-color: var(--boxColor);
+    color: white;
+}
+  
+  .bx5 { 
+    grid-area: bx5; 
+    background-color: var(--boxColor);
+    color: white;
+}
+  
