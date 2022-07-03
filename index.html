@@ -1,91 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The weather, very peculiar</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="./assets/style.css">
-</head>
-<body>
-
-
-    <div class="page-header">
+<DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>The weather, very peculiar</title>
+      <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="./assets/style.css" />
+    </head>
+    <body>
+      <div class="page-header">
         <h1 class="text-center">Weather Dashboard</h1>
-    </div>
-    <div class="container-fluid">
+      </div>
+      <div class="container-fluid">
         <div class="row content">
           <div class="col-sm-3 sidenav">
             <h2>Search for a City:</h2>
-            <ul class="nav nav-pills nav-stacked">
-            </ul><br>
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="City, State">
+            <ul class="nav nav-pills nav-stacked"></ul>
+            <br />
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                id="city-search"
+                class="form-control"
+                placeholder="City name"
+              />
               <span class="input-group-btn">
-                <button class="btn btn-default" type="button">
+                <button id="search" class="btn btn-default" type="button">
                   <span class="glyphicon glyphicon-search"></span>
                 </button>
               </span>
             </div>
-            <hr id ="divide">
+            <hr id="divide" />
             <div id="city-list" class="listed">
+              <!-- <button type="button" class="btn btn-default">ListedCity</button>
               <button type="button" class="btn btn-default">ListedCity</button>
               <button type="button" class="btn btn-default">ListedCity</button>
               <button type="button" class="btn btn-default">ListedCity</button>
-              <button type="button" class="btn btn-default">ListedCity</button>
-              <button type="button" class="btn btn-default">ListedCity</button>
+              <button type="button" class="btn btn-default">ListedCity</button> -->
             </div>
           </div>
-            <div id="display">
-                <h2 id="city">City, State</h2>
-                <div class='heavy' id="temp">Degrees F</div>
-                <div class='heavy' id="wind">MPH</div>
-                <div class='heavy' id="humidity">Percent</div>
-                <div class='heavy' id="index-uv">UV Icon</div>
+          <div id="display">
+            <h2 id="city">City, State</h2>
+            <div class="heavy" id="temp">Degrees F</div>
+            <div class="heavy" id="wind">MPH</div>
+            <div class="heavy" id="humidity">Percent</div>
+            <div class="heavy" id="index-uv">UV Icon</div>
+          </div>
+          <div class="forecast">
+            <h2 class="head">5-Day Forecast</h2>
+            <div class="bx1">
+              <div class="date1">00/00/0000</div>
+              <img src="" alt="" class="icon1" />
+              <div class="hitemp1">uptemp</div>
+              <div class="lotemp1">downtemp</div>
+              <div class="humid1">percent</div>
             </div>
-            <div class="forecast">
-                <h2 class="head">5-Day Forecast</h2>
-                <div class="bx1">
-                    <div class="date1">00/00/0000</div>
-                    <img src="" alt="" class="icon1">
-                    <div class="hitemp1">uptemp</div>
-                    <div class="lotemp1">downtemp</div> 
-                    <div class="humid1">percent</div>
-                </div>
-                <div class="bx2">
-                    <div class="date2">00/00/0000</div>
-                    <img src="" alt="" class="icon2">
-                    <div class="hitemp2">uptemp</div>
-                    <div class="lotemp2">downtemp</div> 
-                    <div class="humid2">percent</div>
-                </div>
-                <div class="bx3">
-                    <div class="date3">00/00/0000</div>
-                    <img src="" alt="" class="icon3">
-                    <div class="hitemp3">uptemp</div>
-                    <div class="lotemp3">downtemp</div> 
-                    <div class="humid3">percent</div>
-                </div>
-                <div class="bx4">
-                    <div class="date4">00/00/0000</div>
-                    <img src="" alt="" class="icon4">
-                    <div class="hitemp4">uptemp</div>
-                    <div class="lotemp4">downtemp</div> 
-                    <div class="humid4">percent</div>
-                </div>
-                <div class="bx5">
-                    <div class="date5">00/00/0000</div>
-                    <img src="" alt="" class="icon5">
-                    <div class="hitemp5">uptemp</div>
-                    <div class="lotemp5">downtemp</div> 
-                    <div class="humid5">percent</div>
-                </div>
+            <div class="bx2">
+              <div class="date2">00/00/0000</div>
+              <img src="" alt="" class="icon2" />
+              <div class="hitemp2">uptemp</div>
+              <div class="lotemp2">downtemp</div>
+              <div class="humid2">percent</div>
             </div>
+            <div class="bx3">
+              <div class="date3">00/00/0000</div>
+              <img src="" alt="" class="icon3" />
+              <div class="hitemp3">uptemp</div>
+              <div class="lotemp3">downtemp</div>
+              <div class="humid3">percent</div>
+            </div>
+            <div class="bx4">
+              <div class="date4">00/00/0000</div>
+              <img src="" alt="" class="icon4" />
+              <div class="hitemp4">uptemp</div>
+              <div class="lotemp4">downtemp</div>
+              <div class="humid4">percent</div>
+            </div>
+            <div class="bx5">
+              <div class="date5">00/00/0000</div>
+              <img src="" alt="" class="icon5" />
+              <div class="hitemp5">uptemp</div>
+              <div class="lotemp5">downtemp</div>
+              <div class="humid5">percent</div>
+            </div>
+          </div>
         </div>
-    </div>        
-</body>
-<script src="./assets/script.js"></script>
-</html>
+      </div>
+    </body>
+    <script src="./assets/script.js"></script></html
+></DOCTYPE>
